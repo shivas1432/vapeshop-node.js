@@ -1,0 +1,32 @@
+<%- include('partials/header', { title: 'Basket | Vape Shop' }) %>
+
+<div class="container">
+    <h2>Your Basket</h2>
+
+    <!-- Display cart items -->
+    <ul id="cart-items">
+        <% if (cart && cart.length > 0) { %>
+            <% cart.forEach(item => { %>
+                <li>
+                    <%= item.name %> <span class="price">£<%= item.price %></span> x <%= item.quantity %>
+                </li>
+            <% }) %>
+        <% } else { %>
+            <li>Your basket is empty.</li>
+        <% } %>
+    </ul>
+
+    <!-- Display total price -->
+    <% if (cart && cart.length > 0) { %>
+        <div class="total-price">
+            <strong>Total Price: £<%= totalPrice %></strong>
+        </div>
+    <% } %>
+
+    <!-- Form to handle checkout -->
+    <form action="/checkout" method="post">
+        <button type="submit" id="checkout" class="btn btn-primary">Checkout</button>
+    </form>
+</div>
+
+<%- include('partials/footer') %>

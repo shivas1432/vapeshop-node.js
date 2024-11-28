@@ -1,0 +1,331 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Footer */
+header, footer {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 20px;
+    height: 100%;
+   margin-top: 150px;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #cce0ff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100%;
+}
+
+/* Vape Types */
+#vape-types {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.vape-type {
+    background-color: #d89d9d;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    text-align: center;
+    flex: 1 1 calc(25% - 30px); /* Slightly more flexible */
+    margin: 15px;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.vape-type:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Active vape type */
+.vape-type.active {
+    background-color: #6676b7;
+}
+
+/* Product List */
+#product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vape-items {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.vape-items ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vape-items li {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.vape-items li:last-child {
+    border-bottom: none;
+}
+
+/* Define fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vape-type {
+        flex: 1 1 calc(45% - 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    .vape-type {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+/* Cart */
+#cart {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+#cart h3 {
+    margin-top: 0;
+}
+
+#cart ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    background-color: #7395c4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hidden Elements */
+.hidden {
+    display:none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #vape-types {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vape-type {
+        flex: 1 1 100%;
+    }
+    footer{
+        margin-bottom: 20px;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cart Icon */
+.cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.cart a {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+/* Style for cart item container */
+#cart-items li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between name and buttons container */
+    margin-bottom: 10px;
+}
+
+/* Style for the product name */
+.cart-product-name {
+    flex: 1; /* Take up remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+/* Style for the buttons container */
+.buttons-container {
+    display: flex;
+    align-items: center; /* Center buttons vertically */
+}
+
+/* Style for the buttons */
+.change-quantity {
+    background-color: #007bff; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 0 2px; /* Small gap between buttons */
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* Hover effect for the buttons */
+.change-quantity:hover {
+    background-color: #0056b3; 
+}
+
+
+.quantity-display {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 5px; 
+}
+
+.vape-items ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for each product item */
+.product-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto; /* Flexible for name, fixed for price and button */
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+    border-bottom: 1px solid #ddd; 
+    padding-bottom: 10px;
+}
+
+/* Style for product name */
+.product-item .name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Style for price element */
+.product-item .price {
+    font-size: 16px;
+    color: #333; /* Darker color for better readability */
+}
+
+/* Style for add-to-cart button */
+.product-item .add-to-cart {
+    background-color: #007bff; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Hover effect for the add-to-cart button */
+.product-item .add-to-cart:hover {
+    background-color: #0056b3; /* Darker shade of primary color */
+}
+.total-price {
+    font-size: 1.5em; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    color: #52d363; /* Change text color */
+    border: 1px solid #44cc66; /* Add a border */
+    padding: 5px; /* Add some padding */
+    border-radius: 5px; /* Round the corners */
+    background-color: #f9f9f9; /* Background color for better visibility */
+}

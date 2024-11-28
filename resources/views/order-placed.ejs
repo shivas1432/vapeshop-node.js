@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed</title>
+    <link rel="stylesheet" href="/css/orderplaced.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <%- include('partials/header', { title: 'Home | Vape Shop' }) %>
+    <div class="order-confirmation-container">
+        <h1>Thank You for Your Order🥳🙌🏽🎉</h1>
+        
+        <div class="order-summary">
+            <h2>Order Confirmation</h2>
+            <p>Your order has been successfully placed. Below are the details of your order:</p>
+            
+            <!-- Order Details -->
+            <div class="order-details">
+                <h3>Order Number: <%= orderNumber %></h3>
+                <h4>Total Price: £<%= totalPrice %></h4>
+                
+                <h3>Items Ordered:</h3>
+                <ul>
+                    <% cart.forEach(item => { %>
+                        <li>
+                            <%= item.name %> x <%= item.quantity %> @ £<%= item.price %> each
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+            
+            <h3>Shipping Address</h3>
+            <p><%= address.name %></p>
+            <p><%= address.address %>, <%= address.city %>, <%= address.state %>, <%= address.zip %></p>
+
+            <h3>Payment Method</h3>
+            <p><%= paymentType === 'credit' ? 'Credit Card' : 'Debit Card' %></p>
+            
+            <div class="next-steps">
+                <p>You will receive an email confirmation with your order details shortly.</p>
+                <p>Thank you for shopping with us!</p>
+                <a href="/basket" class="btn btn-primary">Return to Basket</a>
+                <a href="/" class="btn btn-secondary">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>

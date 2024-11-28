@@ -1,0 +1,100 @@
+/* General container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 ;
+  padding: 20px;
+}
+
+/* Main content flexbox layout */
+.main-content {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px; /* Space between product list and cart */
+}
+
+/* Product list styling */
+#product-list {
+  flex: 1; /* Product list takes up available space */
+}
+
+#product-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+  align-items: flex-start; /* Align items to the top */
+}
+
+#product-list li {
+  flex: 1 1 calc(20% - 20px); /* 5 items per row with gap adjustment */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* Ensure images are responsive */
+.product-details img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Shopping Cart styling */
+#cart {
+  width: 350px; /* Fixed width for the cart */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  position: sticky; /* Fix cart to the viewport */
+  top: 20px; /* Adjust top position */
+  right: 20px; /* Adjust right position */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Add to Cart Button Styling */
+.add-to-cart form {
+  margin-top: 10px;
+}
+
+.add-to-cart button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  #product-list li {
+    flex: 1 1 calc(25% - 20px); /* Adjust for 4 items per row */
+  }
+}
+
+@media (max-width: 900px) {
+  #product-list li {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust for 3 items per row */
+  }
+}
+
+@media (max-width: 600px) {
+  #product-list li {
+    flex: 1 1 calc(50% - 20px); /* Adjust for 2 items per row */
+  }
+}
+
+@media (max-width: 400px) {
+  #product-list li {
+    flex: 1 1 100%; /* Single item per row */
+  }
+
+  #cart {
+    position: static; /* Remove fixed positioning on very small screens */
+    width: 100%;
+    box-shadow: none;
+    margin-top: 20px;
+  }
+}
+

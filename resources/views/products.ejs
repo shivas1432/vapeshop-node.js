@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Vape Shop</title>
+  <link rel="stylesheet" href="/css/products.css">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <%- include('partials/header', { title: 'Products | Vape Shop' }) %>
+
+  <div class="container">
+    <h2>PRODUCTS FOR BULK ORDERS</h2>
+     
+    <div class="main-content">
+      <!-- Product List -->
+      <div id="product-list">
+        <ul>
+          <% products.forEach(function(product) { %>
+            <li>
+              <div class="product-details">
+                <strong><%= product.product_name %></strong> - £<%= product.price %>
+                <br>
+                <span>Puffs: <%= product.puffs %></span>
+                <br>
+                <span>Color: <%= product.color %></span>
+                <br>
+                <span>Electric: <%= product.electric ? 'Yes' : 'No' %></span>
+                <br>
+                <span>Flavor: <%= product.flavor %></span>
+                <br>
+                <img src="<%= product.image_link %>" alt="<%= product.product_name %>">
+              </div>
+              <div class="add-to-cart">
+                <form action="/add-to-cart" method="post">
+                  <input type="hidden" name="product_id" value="<%= product.id %>">
+                  <input type="hidden" class="product-name" value="<%= product.product_name %>">
+                  <input type="hidden" class="product-price" value="<%= product.price %>">
+                  <button type="submit">Add to Cart</button>
+                </form>
+              </div>
+            </li>
+          <% }); %>
+        </ul>
+      </div>
+
+      <!-- Shopping Cart -->
+      <div id="cart" class="fixed-cart">
+        <h3>Shopping Cart</h3>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <button id="proceed-to-checkout" class="btn btn-primary">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+  <script src="/js/checkout.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/product.js"></script>
+</body>
+</html>

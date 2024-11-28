@@ -1,0 +1,12 @@
+{
+    "/public/js/app.js": "/public/js/app.js",
+    "/public/js/cart.js": "/public/js/cart.js",
+    "/public/js/product.js": "/public/js/product.js",
+    "/public/js/checkout.js": "/public/js/checkout.js",
+    "/public/js/payment.js": "/public/js/payment.js",
+    "/public/css/products.css": "/public/css/products.css",
+    "/public/css/payment.css": "/public/css/payment.css",
+    "/public/css/header.css": "/public/css/header.css",
+    "/public/css/orderplaced.css": "/public/css/orderplaced.css",
+    "/public/css/app.css": "/public/css/app.css"
+}

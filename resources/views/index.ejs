@@ -1,0 +1,192 @@
+<%- include('partials/header', { title: 'Home | Vape Shop' }) %>
+
+<div class="container">
+    <h2>Welcome to Vape Shop</h2>
+    <p>Your one-stop shop for all things vape.</p>
+    
+    <!-- Vape Types -->
+    <div id="vape-types">
+        <div class="vape-type" data-type="pod-systems">
+            <h3>Pod Systems</h3>
+        </div>
+        <div class="vape-type" data-type="box-mods">
+            <h3>Box Mods</h3>
+        </div>
+        <div class="vape-type" data-type="disposable-vapes">
+            <h3>Disposable Vapes</h3>
+        </div>
+        <div class="vape-type" data-type="vape-pens">
+            <h3>Vape Pens</h3>
+        </div>
+        <div class="vape-type" data-type="rebuildable-atomizers">
+            <h3>Rebuildable Atomizers</h3>
+        </div>
+    </div>
+
+    <!-- Product List (Hidden initially) -->
+    <div id="product-list">
+        <div id="pod-systems" class="vape-items hidden">
+            <ul>
+                <li class="product-item">
+                    <span class="name">SMOK Nord 4</span>
+                    <span class="price">£29.99</span>
+                    <button class="add-to-cart" data-product="SMOK Nord 4" data-price="29.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Vaporesso XROS</span>
+                    <span class="price">£25.99</span>
+                    <button class="add-to-cart" data-product="Vaporesso XROS" data-price="25.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">GeekVape Aegis Pod</span>
+                    <span class="price">£32.99</span>
+                    <button class="add-to-cart" data-product="GeekVape Aegis Pod" data-price="32.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Uwell Caliburn G</span>
+                    <span class="price">£27.99</span>
+                    <button class="add-to-cart" data-product="Uwell Caliburn G" data-price="27.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Suorin Air Pro</span>
+                    <span class="price">£23.99</span>
+                    <button class="add-to-cart" data-product="Suorin Air Pro" data-price="23.99">Add to Cart</button>
+                </li>
+            </ul>
+        </div>
+
+        <div id="box-mods" class="vape-items hidden">
+            <ul>
+                <li class="product-item">
+                    <span class="name">Voopoo Drag 3</span>
+                    <span class="price">£49.99</span>
+                    <button class="add-to-cart" data-product="Voopoo Drag 3" data-price="49.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">SMOK Morph 2</span>
+                    <span class="price">£45.99</span>
+                    <button class="add-to-cart" data-product="SMOK Morph 2" data-price="45.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">GeekVape Aegis Legend 2</span>
+                    <span class="price">£52.99</span>
+                    <button class="add-to-cart" data-product="GeekVape Aegis Legend 2" data-price="52.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Vaporesso GEN S</span>
+                    <span class="price">£47.99</span>
+                    <button class="add-to-cart" data-product="Vaporesso GEN S" data-price="47.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Lost Vape Thelema Quest</span>
+                    <span class="price">£54.99</span>
+                    <button class="add-to-cart" data-product="Lost Vape Thelema Quest" data-price="54.99">Add to Cart</button>
+                </li>
+            </ul>
+        </div>
+
+        <div id="disposable-vapes" class="vape-items hidden">
+            <ul>
+                <li class="product-item">
+                    <span class="name">Puff Bar Plus</span>
+                    <span class="price">£14.99</span>
+                    <button class="add-to-cart" data-product="Puff Bar Plus" data-price="14.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">ELF Bar 5000</span>
+                    <span class="price">£16.99</span>
+                    <button class="add-to-cart" data-product="ELF Bar 5000" data-price="16.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Bang XXL</span>
+                    <span class="price">£18.99</span>
+                    <button class="add-to-cart" data-product="Bang XXL" data-price="18.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Vaporlax Mesh</span>
+                    <span class="price">£15.99</span>
+                    <button class="add-to-cart" data-product="Vaporlax Mesh" data-price="15.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Hyde Edge Recharge</span>
+                    <span class="price">£17.99</span>
+                    <button class="add-to-cart" data-product="Hyde Edge Recharge" data-price="17.99">Add to Cart</button>
+                </li>
+            </ul>
+        </div>
+
+        <div id="vape-pens" class="vape-items hidden">
+            <ul>
+                <li class="product-item">
+                    <span class="name">SMOK Stick N18</span>
+                    <span class="price">£21.99</span>
+                    <button class="add-to-cart" data-product="SMOK Stick N18" data-price="21.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Freemax Twister 30W</span>
+                    <span class="price">£24.99</span>
+                    <button class="add-to-cart" data-product="Freemax Twister 30W" data-price="24.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Innokin Endura T18 II</span>
+                    <span class="price">£19.99</span>
+                    <button class="add-to-cart" data-product="Innokin Endura T18 II" data-price="19.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Vaporesso Sky Solo</span>
+                    <span class="price">£22.99</span>
+                    <button class="add-to-cart" data-product="Vaporesso Sky Solo" data-price="22.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Joyetech eGo AIO</span>
+                    <span class="price">£20.99</span>
+                    <button class="add-to-cart" data-product="Joyetech eGo AIO" data-price="20.99">Add to Cart</button>
+                </li>
+            </ul>
+        </div>
+
+        <div id="rebuildable-atomizers" class="vape-items hidden">
+            <ul>
+                <li class="product-item">
+                    <span class="name">GeekVape Zeus X RTA</span>
+                    <span class="price">£29.99</span>
+                    <button class="add-to-cart" data-product="GeekVape Zeus X RTA" data-price="29.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Vandy Vape Kylin Mini V2</span>
+                    <span class="price">£32.99</span>
+                    <button class="add-to-cart" data-product="Vandy Vape Kylin Mini V2" data-price="32.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Wotofo Profile RDA</span>
+                    <span class="price">£27.99</span>
+                    <button class="add-to-cart" data-product="Wotofo Profile RDA" data-price="27.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Dovpo Blotto RTA</span>
+                    <span class="price">£30.99</span>
+                    <button class="add-to-cart" data-product="Dovpo Blotto RTA" data-price="30.99">Add to Cart</button>
+                </li>
+                <li class="product-item">
+                    <span class="name">Hellvape Dead Rabbit V2 RDA</span>
+                    <span class="price">£33.99</span>
+                    <button class="add-to-cart" data-product="Hellvape Dead Rabbit V2 RDA" data-price="33.99">Add to Cart</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="cart">
+        <h3>Shopping Cart</h3>
+        <ul id="cart-items">
+            
+
+        </ul>
+        <button id="proceed-to-checkout" class="btn btn-primary">Proceed to Checkout</button>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
+<script src="/js/checkout.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/cart.js"></script>

@@ -1,20 +1,28 @@
 const mysql = require('mysql2');
 require('dotenv').config(); // Load environment variables
-const url = require('url');
+
+// Custom parsing logic for DB_URL
+const parseDbUrl = (dbUrl) => {
+  const dbUrlRegex = /^(mysql:\/\/)(.*):(.*)@(.*):(\d+)\/(.*)$/;
+  const match = dbUrl.match(dbUrlRegex);
+
+  if (!match) {
+    throw new Error("Invalid DB_URL format. Please check the configuration.");
+  }
+
+  const [, , user, password, host, port, database] = match;
+  return {
+    host,
+    port: parseInt(port, 10),
+    user,
+    password,
+    database,
+  };
+};
 
 // Check if DB_URL is provided
 const dbConfig = process.env.DB_URL
-  ? (() => {
-      const { hostname, port, auth, pathname } = new URL(process.env.DB_URL);
-      const [user, password] = auth.split(':');
-      return {
-        host: hostname,
-        port: port || 3306,
-        user: user,
-        password: password,
-        database: pathname.replace('/', ''), // Remove leading slash
-      };
-    })()
+  ? parseDbUrl(process.env.DB_URL)
   : {
       host: process.env.DB_HOST || 'localhost',
       user: process.env.DB_USER || 'root',

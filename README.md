@@ -1,5 +1,5 @@
 
-**VapeShop Node Application**
+# **VapeShop Node Application**
 ## Description
 
 The **VapeShop Web Application** is a modern e-commerce platform for purchasing vape products online. Built with **Node.js** as the backend, **EJS** as the templating engine, and **Laravel Mix** for asset management, the platform provides a seamless shopping experience. 

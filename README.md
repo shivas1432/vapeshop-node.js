@@ -1,7 +1,17 @@
 # Project Name
 
 ## Description
-This is a web application using **Node.js** as the backend and **EJS** as the templating engine for dynamic HTML rendering. **Laravel Mix** is used for asset management, bundling, and versioning of CSS and JavaScript files.
+
+
+The **VapeShop Web Application** is a modern e-commerce platform for purchasing vape products online. Built with **Node.js** as the backend, **EJS** as the templating engine, and **Laravel Mix** for asset management, the platform provides a seamless shopping experience. 
+
+### Key Features:
+- **Add Items to Cart**: Users can browse through various vape products and add them to their shopping cart.
+- **Checkout and Purchase**: Once the user is ready to purchase, they can proceed to checkout, fill in their shipping details, and complete the payment.
+- **Order Confirmation**: After completing the purchase, the user receives an order confirmation page with details of their transaction.
+- **Responsive UI**: The application is designed to be mobile-friendly and provides a smooth user experience across all devices.
+- **User-Friendly Interface**: Easy-to-navigate design for users to search and filter through different products.
+
 
 ## Installation
 

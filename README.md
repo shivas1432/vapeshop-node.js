@@ -72,8 +72,6 @@ The webpack.mix.js file contains the configuration for compiling and bundling as
 
 Example of Usage in EJS Views
 
-html
-Copy code
 <head>
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 </head>

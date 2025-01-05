@@ -56,8 +56,6 @@ Enhance performance by reducing load times.
 Project Structure
 Here’s an overview of the important directories and files:
 
-bash
-Copy code
 /resources/views      - EJS view templates
 /public               - Public files (images, fonts, compiled assets like CSS/JS)
 /resources            - can make changes in server
